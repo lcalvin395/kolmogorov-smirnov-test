@@ -32,13 +32,13 @@ with open("/Users/lukecalvin/2023/eli_np_muon_primaries_1.0GeV/muoncoeffsave.csv
 
 for i in range(0,len(eleccoeff[1])):
     for j in range(0,int(eleccoeff[1][i])):
-        print(int(eleccoeff[1][i]))
+        
         x.append(eleccoeff[0][i])
 
 
 for i in range(0,len(muoncoeff[1])):
     for j in range(0,int(muoncoeff[1][i])):
-        print(int(muoncoeff[1][i]))
+        
         y.append(muoncoeff[0][i])
 #print(y)
 
@@ -81,13 +81,13 @@ with open("/Users/lukecalvin/2023/eli_np_muon_primaries_1.0GeV/muontracksave.csv
 
 for i in range(0,len(electrack[1])):
     for j in range(0,int(electrack[1][i])):
-        print(int(electrack[1][i]))
+        
         a.append(electrack[0][i])
 
 
 for i in range(0,len(muontrack[1])):
     for j in range(0,int(muontrack[1][i])):
-        print(int(muontrack[1][i]))
+        
         b.append(muontrack[0][i])
 #print(y)
 

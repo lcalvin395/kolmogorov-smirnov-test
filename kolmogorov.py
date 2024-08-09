@@ -101,4 +101,4 @@ test = np.random.normal(0, 1, 1000)
 #print(x)
 #print(test)
 
-print('track: ',ks_2samp(x, y))
+print('track: ',ks_2samp(a, b))

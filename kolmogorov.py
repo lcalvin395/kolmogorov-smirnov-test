@@ -56,6 +56,101 @@ print('coeff: ',ks_2samp(x, y))
 #Ks_2sampResult(statistic=0.022999999999999909, pvalue=0.95189016804849647)
 #Ks_2sampResult(statistic=0.41800000000000004, pvalue=3.7081494119242173e-77)
 
+elecmean=[[],[]]
+muonmean=[[],[]]
+e=[]
+f=[]
+with open("/Users/lukecalvin/2023/eli_np_muon_primaries_1.0GeV/elecmeansave.csv", "r") as txt_file7:
+    for line in txt_file7:
+        
+        elecmean[0].append(float(line.split()[0]))
+        elecmean[1].append(float(line.split()[1]))
+
+
+#print(eleccoeff)
+
+with open("/Users/lukecalvin/2023/eli_np_muon_primaries_1.0GeV/muonmeansave.csv", "r") as txt_file8:
+    for line in txt_file8:
+        
+        muonmean[0].append(float(line.split()[0]))
+        muonmean[1].append(float(line.split()[1]))
+
+
+#print(muoncoeff)
+
+for i in range(0,len(elecmean[1])):
+    for j in range(0,int(elecmean[1][i])):
+        
+        e.append(elecmean[0][i])
+
+
+for i in range(0,len(muonmean[1])):
+    for j in range(0,int(muonmean[1][i])):
+        
+        f.append(muonmean[0][i])
+#print(y)
+
+
+
+
+np.random.seed(12345678)
+test = np.random.normal(0, 1, 1000)
+
+
+#print(x)
+#print(test)
+
+print('mean: ',ks_2samp(x, y))
+#Ks_2sampResult(statistic=0.022999999999999909, pvalue=0.95189016804849647)
+#Ks_2sampResult(statistic=0.41800000000000004, pvalue=3.7081494119242173e-77)
+
+elecmode=[[],[]]
+muonmode=[[],[]]
+c=[]
+d=[]
+with open("/Users/lukecalvin/2023/eli_np_muon_primaries_1.0GeV/elecmodesave.csv", "r") as txt_file5:
+    for line in txt_file5:
+        
+        elecmode[0].append(float(line.split()[0]))
+        elecmode[1].append(float(line.split()[1]))
+
+
+#print(eleccoeff)
+
+with open("/Users/lukecalvin/2023/eli_np_muon_primaries_1.0GeV/muonmodesave.csv", "r") as txt_file6:
+    for line in txt_file6:
+        
+        muonmode[0].append(float(line.split()[0]))
+        muonmode[1].append(float(line.split()[1]))
+
+
+#print(muoncoeff)
+
+for i in range(0,len(elecmode[1])):
+    for j in range(0,int(elecmode[1][i])):
+        
+        c.append(elecmode[0][i])
+
+
+for i in range(0,len(muonmode[1])):
+    for j in range(0,int(muonmode[1][i])):
+        
+        d.append(muonmode[0][i])
+#print(y)
+
+
+
+
+np.random.seed(12345678)
+test = np.random.normal(0, 1, 1000)
+
+
+#print(x)
+#print(test)
+
+print('mode: ',ks_2samp(c, d))
+#Ks_2sampResult(statistic=0.022999999999999909, pvalue=0.95189016804849647)
+#Ks_2sampResult(statistic=0.41800000000000004, pvalue=3.7081494119242173e-77)
 
 electrack=[[],[]]
 muontrack=[[],[]]

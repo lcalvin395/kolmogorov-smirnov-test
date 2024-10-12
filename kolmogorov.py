@@ -14,7 +14,7 @@ x=[]
 y=[]
 with open("/Users/lukecalvin/2023/eli_np_muon_primaries_1.0GeV/eleccoeffsave.csv", "r") as txt_file1:
     for line in txt_file1:
-        
+
         eleccoeff[0].append(float(line.split()[0]))
         eleccoeff[1].append(float(line.split()[1]))
 
@@ -29,17 +29,19 @@ with open("/Users/lukecalvin/2023/eli_np_muon_primaries_1.0GeV/muoncoeffsave.csv
 
 
 #print(muoncoeff)
-
+#print(eleccoeff)
 for i in range(0,len(eleccoeff[1])):
     for j in range(0,int(eleccoeff[1][i])):
-        
         x.append(eleccoeff[0][i])
 
-
+print(muoncoeff)
 for i in range(0,len(muoncoeff[1])):
+    print(i)
     for j in range(0,int(muoncoeff[1][i])):
+        print(j)
         
         y.append(muoncoeff[0][i])
+        print(muoncoeff[0][i])
 #print(y)
 
 
@@ -49,10 +51,22 @@ np.random.seed(12345678)
 test = np.random.normal(0, 1, 1000)
 
 
-#print(x)
+newx=[]
+
+for i in range(0,len(x)):
+
+    newx.append(x[i]/sum(x)) 
+
+newy=[]
+
+for i in range(0,len(y)):
+
+    newy.append(y[i]/sum(y)) 
+
+
 #print(test)
 
-print('coeff: ',ks_2samp(x, y))
+print('coeff: ',ks_2samp(newx, newy))
 #Ks_2sampResult(statistic=0.022999999999999909, pvalue=0.95189016804849647)
 #Ks_2sampResult(statistic=0.41800000000000004, pvalue=3.7081494119242173e-77)
 
@@ -100,7 +114,24 @@ test = np.random.normal(0, 1, 1000)
 #print(x)
 #print(test)
 
-print('mean: ',ks_2samp(x, y))
+
+newe=[]
+
+for i in range(0,len(e)):
+
+    newe.append(e[i]/sum(e)) 
+
+newf=[]
+
+for i in range(0,len(f)):
+
+    newf.append(f[i]/sum(f)) 
+
+
+#print(test)
+
+print('mean: ',ks_2samp(newe, newf))
+
 #Ks_2sampResult(statistic=0.022999999999999909, pvalue=0.95189016804849647)
 #Ks_2sampResult(statistic=0.41800000000000004, pvalue=3.7081494119242173e-77)
 
@@ -148,7 +179,24 @@ test = np.random.normal(0, 1, 1000)
 #print(x)
 #print(test)
 
-print('mode: ',ks_2samp(c, d))
+newc=[]
+
+for i in range(0,len(c)):
+
+    newc.append(c[i]/sum(c)) 
+
+newd=[]
+
+for i in range(0,len(d)):
+
+    newd.append(d[i]/sum(d)) 
+
+
+#print(test)
+
+print('mode: ',ks_2samp(newc, newd))
+
+
 #Ks_2sampResult(statistic=0.022999999999999909, pvalue=0.95189016804849647)
 #Ks_2sampResult(statistic=0.41800000000000004, pvalue=3.7081494119242173e-77)
 
@@ -196,4 +244,22 @@ test = np.random.normal(0, 1, 1000)
 #print(x)
 #print(test)
 
-print('track: ',ks_2samp(a, b))
+
+newa=[]
+
+for i in range(0,len(a)):
+
+    newa.append(a[i]/sum(a)) 
+
+newb=[]
+
+for i in range(0,len(b)):
+
+    newb.append(b[i]/sum(b)) 
+
+
+#print(test)
+
+print('track: ',ks_2samp(newa, newb))
+
+

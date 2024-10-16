@@ -66,7 +66,7 @@ for i in range(0,len(y)):
 
 #print(test)
 
-print('coeff: ',ks_2samp(newx, newy))
+print('coeff: ',ks_2samp(x, y))
 #Ks_2sampResult(statistic=0.022999999999999909, pvalue=0.95189016804849647)
 #Ks_2sampResult(statistic=0.41800000000000004, pvalue=3.7081494119242173e-77)
 
@@ -130,7 +130,7 @@ for i in range(0,len(f)):
 
 #print(test)
 
-print('mean: ',ks_2samp(newe, newf))
+print('mean: ',ks_2samp(e, f))
 
 #Ks_2sampResult(statistic=0.022999999999999909, pvalue=0.95189016804849647)
 #Ks_2sampResult(statistic=0.41800000000000004, pvalue=3.7081494119242173e-77)
@@ -194,7 +194,7 @@ for i in range(0,len(d)):
 
 #print(test)
 
-print('mode: ',ks_2samp(newc, newd))
+print('mode: ',ks_2samp(c, d))
 
 
 #Ks_2sampResult(statistic=0.022999999999999909, pvalue=0.95189016804849647)
@@ -260,6 +260,6 @@ for i in range(0,len(b)):
 
 #print(test)
 
-print('track: ',ks_2samp(newa, newb))
+print('track: ',ks_2samp(a, b))
 
 
